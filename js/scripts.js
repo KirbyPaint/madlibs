@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $("#formOne").submit(function() {
+  console.log("Script executing!");
+  $("#formOne").submit(function(event) {
+    event.preventDefault();
+    console.log("Submit form successfully reached.");
     const person1Input = $("input#person1").val();
     const person2Input = $("input#person2").val();
     const animalInput= $("input#animal").val();
@@ -14,6 +17,6 @@ $(document).ready(function() {
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
 
-    $("#story").sho();
+    $("#story").show();
   });
 });
