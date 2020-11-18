@@ -1,16 +1,15 @@
 $(document).ready(function() {
-  console.log("Script executing!");
   $("#formOne").submit(function(event) {
     event.preventDefault();
-    console.log("Submit form successfully reached.");
     const person1Input = $("input#person1").val();
+    console.log(person1Input);
     const person2Input = $("input#person2").val();
     const animalInput= $("input#animal").val();
     const exclamationInput = $("input#exclamation").val();
     const verbInput = $("input#verb").val();
     const nounInput = $("input#noun").val();
 
-    $("person1").text(person1Input);
+    $(".person1").text(person1Input);
     $(".person2").text(person2Input);
     $(".animal").text(animalInput);
     $(".exclamation").text(exclamationInput);
